@@ -10,7 +10,7 @@ This benchmark requires a registered version of Geekbench. To register, you
 must first purchase a license key, then download the Geekbench software, and 
 finally enter your registration key - e.g.
 
-build.pulse/dist/Geekbench-4.0.1-Linux/geekbench_x86_64 -r [email] [registration key]
+Geekbench-4.2.0-Linux/geekbench_x86_64 -r [email] [registration key]
 
 
 TESTING PARAMETERS
@@ -35,8 +35,8 @@ for instructions.
 * geekbench_dir             Directory where Geekbench is installed. If not 
                             specified, the benchmark run script will look up 
                             the directory tree from both pwd and --output for 
-                            presence of a 'build.pulse/dist/Geekbench-4.0.1-Linux' or 
-                            'Geekbench-4.0.1-Linux' directory with an 
+                            presence of a 'build.pulse/dist/Geekbench-4.2.0-Linux' or 
+                            'Geekbench-4.2.0-Linux' directory with an 
                             executable 'geekbench_x86_64' executable in it. The 
                             test harness will check if Geekbench has been 
                             registered and generate an error if it has not
