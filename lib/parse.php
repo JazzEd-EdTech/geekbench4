@@ -57,6 +57,25 @@ if (isset($argv[1]) && file_exists($argv[1]) && file_exists($json = dirname($arg
         }
       }
     }
+    // these scores are not in the json for some reason
+    if (file_exists($txt = dirname($argv[1]) . '/geekbench.txt') && ($buffer = file_get_contents($txt))) {
+      if (preg_match_all('/Crypto Score\s+([0-9]+)$/mi', $buffer, $m) == 2) {
+        printf("crypto_multicore_score=%d\n", $m[1][1]);
+        printf("crypto_score=%d\n", $m[1][0]);
+      }
+      if (preg_match_all('/Floating Point Score\s+([0-9]+)$/mi', $buffer, $m) == 2) {
+        printf("floating_point_multicore_score=%d\n", $m[1][1]);
+        printf("floating_point_score=%d\n", $m[1][0]);
+      }
+      if (preg_match_all('/Integer Score\s+([0-9]+)$/mi', $buffer, $m) == 2) {
+        printf("integer_multicore_score=%d\n", $m[1][1]);
+        printf("integer_score=%d\n", $m[1][0]);
+      }
+      if (preg_match_all('/Memory Score\s+([0-9]+)$/mi', $buffer, $m) == 2) {
+        printf("memory_multicore_score=%d\n", $m[1][1]);
+        printf("memory_score=%d\n", $m[1][0]);
+      }
+    }
   }
 }
 exit($status);

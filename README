@@ -135,14 +135,13 @@ removed using the save.sh --remove parameter
 benchmark_version: [benchmark version]
 claim_url: [Geekbench browser claim URL - to associate results to your account]
 collectd_rrd: [URL to zip file containing collectd rrd files]
-floating_point_multicore_rate: multithreaded floating point rate]
+crypto_multicore_score: [multithreaded crypto score]
+crypto_score: [single threaded crypto score]
 floating_point_multicore_score: [multithreaded floating point score]
-floating_point_score: [single threaded integer score]
-integer_multicore_rate: multithreaded integer rate]
+floating_point_score: [single threaded floating point score]
 integer_multicore_score: [multithreaded integer score]
 integer_score: [single threaded integer score]
 iteration: [iteration number (used with incremental result directories)]
-memory_multicore_rate: multithreaded memory rate]
 memory_multicore_score: [multithreaded memory score]
 memory_score: [single threaded memory score]
 meta_burst
@@ -165,7 +164,6 @@ meta_resource_id
 meta_run_id
 meta_storage_config*
 meta_test_id*
-multicore_rate: multithreaded geekbench rate]
 multicore_score: [multithreaded geekbench score]
 option_iterations: test iterations
 option_workers: test workers
